@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process query</title>
+</head>
+<body>
+    <h1>Enter your query</h1>
+    <form action="/process_query" method = "POST">
+        <input type="text" name="query" value="" required> 
+        <br>
+        Reset previous memory?<input type="checkbox" name="reset_history">
+        <br>
+        <input type="submit">
+        <br>
+        {% if res %}
+        {{res}}
+        {% endif %}
+    </form>
+</body>
+</html>
